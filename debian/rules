@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=cmake
+
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DBUILD_SHARED_LIBS=1 -DCMAKE_BUILD_TYPE=Release -DDISABLE_GO=1 -DDISABLE_PERL=1 \
+	                     -DBUILD_TESTING=0 -DCMAKE_INSTALL_PREFIX=/opt/aws-lc/

@@ -1,0 +1,6 @@
+libssl-awslc (1.34.2) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- wla <wla@localhost>  Sun, 01 Sep 2024 16:41:02 +0200
+

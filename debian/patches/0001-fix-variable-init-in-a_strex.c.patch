@@ -1,0 +1,25 @@
+From 2d7bee0993eacc94fbc5f20c8d4883ded09b4b42 Mon Sep 17 00:00:00 2001
+From: William Lallemand <wlallemand@haproxy.com>
+Date: Sun, 1 Sep 2024 17:38:48 +0200
+Subject: [PATCH] fix variable init in a_strex.c
+
+---
+ crypto/asn1/a_strex.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/crypto/asn1/a_strex.c b/crypto/asn1/a_strex.c
+index 06af54d56..a9bfb3d2d 100644
+--- a/crypto/asn1/a_strex.c
++++ b/crypto/asn1/a_strex.c
+@@ -160,7 +160,7 @@ static int do_buf(const unsigned char *buf, int buflen, int encoding,
+     // for invalid codepoints. Before doing that, enforce it in the parser,
+     // https://crbug.com/boringssl/427, so these error cases are not
+     // reachable from parsed objects.
+-    uint32_t c;
++    uint32_t c = 0;
+     switch (encoding) {
+       case MBSTRING_UNIV:
+         c = ((uint32_t)*p++) << 24;
+-- 
+2.43.0
+
