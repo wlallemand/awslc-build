@@ -1,6 +1,6 @@
-libssl-awslc (1.34.2) UNRELEASED; urgency=medium
+libssl-awslc (3.0.0) noble; urgency=medium
 
-  * Initial release. (Closes: #XXXXXX)
+  [ William Lallemand ]
+  * Upgrade to 3.0.0 version 
 
- -- wla <wla@localhost>  Sun, 01 Sep 2024 16:41:02 +0200
-
+ -- William Lallemand <wlallemand@irq6.net>  Tue, 18 Feb 2025 23:32:57 +0100
